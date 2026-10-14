@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control de variables del invernadero</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #111; }
+    main { max-width: 760px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 1.3rem; background: #ececec; margin: 0; padding: 16px; }
+    .panel { background: #ececec; padding: 0 16px 16px; }
+    .card { background: #fff; padding: 16px; }
+    label { display: block; font-weight: bold; font-size: .85rem; margin-top: 8px; }
+    input, select { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #bbb; font-size: .95rem; }
+    .fila { display: flex; gap: 8px; align-items: flex-end; }
+    .fila > div { flex: 1; }
+    button { padding: 9px 16px; border: 1px solid #999; background: #f3f3f3; cursor: pointer; font-size: .9rem; }
+    button:hover, button:focus-visible { background: #e2e2e2; outline: 2px solid #7a2733; }
+    .acciones { margin-top: 12px; display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CONTROL DE VARIABLES DEL INVERNADERO</h1>
+    <div class="panel"><div class="card">
+      <label for="idioma">Idioma del reporte:</label>
+      <select id="idioma">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+
+      <label for="temperatura">Temperatura (°C):</label>
+      <input id="temperatura" type="text" readonly>
+
+      <label for="humedad">Humedad (%):</label>
+      <input id="humedad" type="text" readonly>
+
+      <label for="ph">pH:</label>
+      <input id="ph" type="text" readonly>
+
+      <div class="fila">
+        <div>
+          <label for="reporte">Reporte escrito:</label>
+          <input id="reporte" type="text" readonly>
+        </div>
+        <button id="btnLeer" type="button">Leer datos</button>
+      </div>
+
+      <div class="acciones">
+        <button id="btnReporte" type="button">Reporte</button>
+      </div>
+    </div></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
